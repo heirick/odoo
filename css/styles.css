@@ -13,7 +13,7 @@ section .content h3 {
   padding: 0.8em 0 1em;
   color: #152C5B; }
 
-section.features, section.technology {
+section.features, section.technology, .infinite.features {
   padding-top: 11em;
   background: url("../img/dots.jpg") no-repeat 40% top;
   background-size: 200px 200px; }
@@ -258,19 +258,22 @@ section.technology {
   .airbnb p b {
     display: block; }
 
-.infinite.features .purple-block {
-  background: #161348;
-  padding: 5em 0 5em 40px;
-  margin-bottom: 10em;
-  color: #ffffff;
-  border-radius: 0 40px; }
-  .infinite.features .purple-block h4 {
-    font-size: 30px; }
-  .infinite.features .purple-block p {
-    font-size: 14px; }
-  .infinite.features .purple-block .btn-light {
-    float: right;
-    margin: 20px 40px 0 0; }
+.infinite.features {
+  transform: scaleX(-1); }
+  .infinite.features .purple-block {
+    transform: scaleX(-1);
+    background: #161348;
+    padding: 5em 0 5em 40px;
+    margin-bottom: 10em;
+    color: #ffffff;
+    border-radius: 0 40px; }
+    .infinite.features .purple-block h4 {
+      font-size: 30px; }
+    .infinite.features .purple-block p {
+      font-size: 14px; }
+    .infinite.features .purple-block .btn-light {
+      float: right;
+      margin: 20px 40px 0 0; }
 
 .install a img {
   width: 40%; }
