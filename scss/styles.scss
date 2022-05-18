@@ -1,0 +1,426 @@
+
+
+@import './variables.scss';
+@import './placeholders.scss';
+@import './mixins.scss';
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+
+
+.rounded-lg { // force roundness
+  border-radius: 10px!important;
+}
+p {
+  font-size: 1.1rem;
+}
+
+.menu {
+  @extend %background-blue;
+  height: auto;
+  .navbar {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 20px 0px 40px;
+  }
+  .navbar-brand {
+    width: 8%;
+  }
+  a {
+    color: $white;
+    &:hover {
+      color: $dark-color;
+      //border-bottom: 1px solid $white;
+    }
+  }
+  button {
+    // background-color:#666666;
+  }
+  .form-inline a {
+      margin-right: 30px;
+      }
+  i {
+    padding-right: 10px;
+  }
+}
+
+//// HEADER ////
+///////////////
+
+header{
+  @extend %background-blue;
+  padding: 10em 0 5em;
+  height: auto;
+  color: $white;
+  .container {
+    padding: 0px 0px;
+  }
+  h1 {
+    color: $white;
+    font-size: 75px;
+  }
+  p {
+    padding: 2.5em 0;
+    width: 80%;
+  }
+  .btn {
+    background-color: $white;
+    padding: 15px 20px;
+    display: block;
+    border: none;
+    color: $dark-color;
+  }
+  ul {
+    padding: 2.5em 0 20px;
+  }
+  li {
+    display: inline-block;
+    width: 18%;
+    padding: 5px;
+    text-align: left;
+    &:first-child {
+      padding-left: 0;
+    }
+  }
+  .cards-container {
+    width:90%;
+    padding-left: 10%;
+
+    .cards {
+      background-color: $white;
+      color: $dark-color;
+      border: none;
+      padding: 20px 40px 30px;
+      border-radius: 2% 2% 65px 2%;
+      div {
+        padding: 0 0;
+      }
+      .row {
+        margin-bottom: 1em;
+        border-bottom: 1px solid #E9ECF3;
+        &:last-child, &:first-child {
+          border: none;
+        }
+        img {
+          width: 100%;
+          padding-bottom: 1em;
+        }
+        h5 {
+          font-size: 17px;
+          font-weight: 600;
+          padding-bottom: 0px;
+        }
+        p {
+          padding: 0.1em 0 0.7em;
+          font-size: 14px;
+          color: $color-text;
+          width: 100%;
+
+        }
+        .col-sm-4 {
+          text-align: right;
+        }
+        a {
+          border-bottom: dashed 1px $blue;
+          &:hover {
+            @extend %simple-button-over;
+          }
+        }
+      }
+    }
+  }
+}
+
+section {
+  padding-top: 7em;
+  position: relative;
+
+  .bloc.video.rounded-lg {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: none;
+    position: relative;
+
+    button {
+      position: absolute;
+      top: 20px;
+      left:20px;
+      i{
+        padding-left: 5px;
+      }
+    }
+  }
+  .bloc {
+    display: block;
+    width: 90%;
+    padding: 30px;
+    border: 1px solid #E9ECF3;
+    h4 {
+      padding-bottom: 20px;
+    }
+    h5 {
+      font-size: 17px;
+      font-weight: 500;
+      padding-bottom: 10px;
+    }
+    .col-sm-4 {
+      text-align: right;
+    }
+    .progress {
+      height: 3px;
+      margin-bottom: 50px;
+      &:last-child {
+        margin-bottom: 10px;
+      }
+    }
+    img {
+      width: 100%;
+    }
+  }
+  .content {
+    width:90%;
+    padding-left: 10%;
+    line-height: 1.8;
+
+    h2.yellow {
+      @include color-titles($yellow);
+    }
+    h2.green {
+        @include color-titles($green);
+    }
+    h2.blue {
+        @include color-titles($blue);
+      }
+    h3 {
+      @extend %h3-style;
+    }
+    p {
+      color: $color-text;
+    }
+    b {
+      display: block;
+      font-size: 22px;
+      font-weight: 500;
+      padding: 1.2em 0 1.6em;
+    }
+  }
+  .left-text {
+    padding-left: 0;
+    padding-top: 2em;
+  }
+}
+section.features {
+  @extend %bg-image-setup;
+
+  .bloc.video.rounded-lg {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: none;
+    position: relative;
+
+    button {
+      position: absolute;
+      top: 20px;
+      left:20px;
+      i{
+        padding-left: 5px;
+      }
+    }
+  }
+}
+section.technology {
+  @extend %bg-image-setup;
+  transform: scaleX(-1);
+  background-position: 50% top;
+  .container {
+    transform: scaleX(-1);
+  }
+  a {
+    border-bottom: solid 2px $blue;
+    padding-bottom: 5px;
+    &:hover {
+      @extend %simple-button-over;
+    }
+  }
+  .col.centered {
+    padding-top: 50px;
+  }
+}
+
+//// CARD ////
+/////////////
+
+.awards.card {
+    border-color:none;
+}
+
+.card {
+    @extend %border-card;
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 20px;
+    color: $dark-color;
+    h5 {
+      display: inline;
+      font-size: 15px;
+      span {
+        background-color: $yellow;
+        @extend %border-50;
+        padding: 7px;
+        margin-right: 5px;
+        font-size: 14px;
+        color: $white;
+      }
+    }
+    i.round {
+      float: right;
+    }
+    .card-body {
+      padding: 0.75rem;
+      img {
+        width: 30%;
+        @extend %border-50;
+        margin: 0px auto 15px;
+      }
+    }
+    div.success-text {
+
+      p {
+        font-size: 14px;
+        margin: 0;
+        display: block;
+        color: $color-text;
+      }
+      b {
+        display: block;
+      }
+    }
+  }
+  .airbnb {
+    img {
+      width: 50%;
+      margin: 50px auto 15px;
+    }
+    .company {
+      @extend %border-50;
+    }
+    .stars {
+      display: block;
+      margin: 0 auto 20px;
+      text-align: center;
+      i {
+        display: inline-block;
+        align-content: center;
+      }
+      .bi-star-fill {color: $yellow;}
+      .bi-star {color: #E9ECF3;}
+    }
+    p {
+      text-align: center;
+      padding-bottom: 20px;
+      b {display: block;}
+    }
+  }
+
+.infinite.features {
+  .purple-block {
+    background: #161348;
+    padding: 5em 0 5em 40px;;
+    margin-bottom: 10em;
+    color: $white;
+    border-radius: 0 40px;
+
+    h4 {
+      font-size: 30px;
+    }
+    p {
+      font-size: 14px;
+    }
+    .btn-light {
+      float: right;
+      margin: 20px 40px 0 0;
+
+    }
+  }
+}
+
+.install {
+  a img {
+    width: 40%;
+  }
+}
+
+.awards {
+  padding-top: 10em;
+  padding-bottom: 10em;
+  background: #E9ECF3;
+  .card {
+    width:23%;
+    margin-right: 2%;
+    &:first-child {
+      margin-left: 10px;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+    &:hover {
+      box-shadow: 1px -4px 14px 7px rgba(100,100,100,0.1);
+      -webkit-box-shadow: 1px -4px 14px 7px rgba(100,100,100,0.1);
+      -moz-box-shadow: 1px -4px 14px 7px rgba(100,100,100,0.1);
+    }
+    b {
+      margin-bottom: 0;
+      padding: 0;
+      color: $dark-color;
+    }
+  }
+  .container.content {
+      width: 125%;
+      padding: 0;
+  }
+}
+
+
+//// ACCORDION ////
+///////////////////
+.container.accordion {
+  padding-bottom: 10em;
+  div.text {
+    text-align: center;
+    width: 100%;
+    p {
+      margin-bottom: 5em;
+    }
+  }
+  .accordion {
+    border-radius: 25px;
+    border-color: #E9ECF3;
+    border-width: 1px;
+    background-color: none;
+    .card {
+      box-shadow: 1px -4px 14px 7px rgba(237,237,237,0.25);
+      -webkit-box-shadow: 1px -4px 14px 7px rgba(237,237,237,0.25);
+      -moz-box-shadow: 1px -4px 14px 7px rgba(237,237,237,0.25);
+      border-radius: 25px;
+      margin-bottom: 25px;
+      .card-header {
+        background-color: $white;
+      }
+      .card-body {
+        border: 1px solid #E9ECF3;
+      }
+    }
+  }
+  .accordion>.card:not(:last-of-type) {
+      border: 1px solid #E9ECF3;
+  }
+  button {
+    font-weight: 500;
+    color: $dark-color;
+    i:first-child{
+      padding-right: 10px;
+    }
+    i:last-child {
+      float: right;
+    }
+  }
+}

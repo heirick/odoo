@@ -1,0 +1,11 @@
+
+@mixin color-titles($color) {
+  box-sizing: border-box;
+  display: inline;
+  padding: 5px 15px;
+  font-size: 15px;
+  color: $white;
+  background-color: $color;
+  width: 15%;
+  text-align: center;
+}

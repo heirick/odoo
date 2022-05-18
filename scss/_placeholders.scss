@@ -1,0 +1,26 @@
+%border-50 {
+  border-radius: 50%;
+}
+%border-card {
+  border-radius: 15px;
+}
+
+%background-blue {
+  background-color: $odoo-blue;
+}
+
+%h3-style {
+  font-size: 38px;
+  padding: 0.8em 0 1em;
+  color: $dark-color;
+}
+%bg-image-setup {
+  padding-top: 11em;
+  background: url("../img/dots.jpg") no-repeat 40% top;
+  background-size: 200px 200px;
+}
+%simple-button-over {
+  text-decoration: none;
+  border-color: $dark-color;
+  color: $dark-color;
+}
