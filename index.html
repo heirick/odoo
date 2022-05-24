@@ -51,7 +51,7 @@
               <div class="col">
                 <h1>Development done right</h1>
                 <p>Build a beautiful, modern website with flexible components built from scratch.</p>
-                <button type="button" class="btn btn-primary btn-lg">Get starded</button>
+                <button type="button" class="btn btn-primary btn-lg">Get starded<i class="bi bi-plus"></i></button>
                 <ul class="trust">
                   <li>Trusted by:</li>
                   <li><img src="img/google-white.svg" alt="Google"></li>
@@ -64,9 +64,9 @@
                 <div class="cards">
                   <div class="row">
                       <div class="col-sm-8">
-                        <h5>Manage cards</h5>
+                        <h5 class="title">Manage cards</h5>
                       </div>
-                      <div class="col-sm-4">Add new</div>
+                      <div class="col-sm-4"><button type="button" class="btn btn-outline-secondary">Add new</button></div>
                     </div>
                     <div class="row">
                         <div class="col-sm-12">
@@ -132,7 +132,7 @@
                     <div class="progress">
                       <div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
-                    <div class="bloc video rounded-lg">
+                    <div class="bloc video rounded-lg float">
                       <img src="img/img_01.jpg" alt="Team" class="rounded-lg">
                       <div class="">
                         <button type="button" class="btn btn-light">Play video<i class="bi bi-play"></i></button>
@@ -153,11 +153,11 @@
     <section class="features">
       <div class="container">
         <div class="row">
-          <div class="col content left-text">
+          <div class="col content left-text green">
             <h2 class="green rounded-pill">Features</h2>
             <b>Get components and examples, including tons of variables that will help you grow your business.</b>
-            <p>Perfect for modern startups</p>
-            <p>Fully customizable and scalable</p>
+            <p><i class="bi bi-check-square-fill"></i>Perfect for modern startups</p>
+            <p><i class="bi bi-check-square-fill"></i>Fully customizable and scalable</p>
           </div>
           <div class="col">
             <div class="bloc video rounded-lg">
@@ -187,6 +187,7 @@
                   <div class="card">
                     <div class="card-body">
                       <div class="success-text">
+                        <img src="img/check-green.gif" alt="Check">
                         <p><b>300+ components</b>Build to be customized</p>
                       </div>
                     </div>
@@ -215,9 +216,11 @@
                       <p class="card-text">
                         <b>Website UI Kit</b>
                       </p>
-                      <img src="img/person_01.jpg" class="card-img-top" alt="Company">
-                      <img src="img/person_02.jpg" class="card-img-top" alt="Company">
-                      <img src="img/person_03.jpg" class="card-img-top" alt="Company">
+                      <div class="center">
+                        <img src="img/person_01.jpg" class="card-img-top" alt="Company">
+                        <img src="img/person_02.jpg" class="card-img-top" alt="Company">
+                        <img src="img/person_03.jpg" class="card-img-top" alt="Company">
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -289,23 +292,16 @@
                   </p>
                 </div>
               </div>
-              <div class="card airbnb">
+              <div class="card airbnb amazon">
                 <img src="img/amazon.svg" class="card-img-top" alt="Jimmy Hendrix">
                 <div class="card-body">
-                  <span class="stars">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star"></i>
-                  </span>
                   <p class="card-text">
-                    <b>4.95 out of 5 stars</b>
-                    from 23 viewers
+                    They build modern-looking websites easily using Tabs.
+                    <a href="#">Learn more</a>
                   </p>
                 </div>
               </div>
-              <div class="card airbnb">
+              <div class="card airbnb paypal">
                 <img src="img/paypal.svg" class="card-img-top" alt="Jimmy Hendrix">
                 <div class="card-body">
                   <span class="stars">
@@ -322,23 +318,25 @@
                 </div>
               </div>
 
-
-              <div class="card airbnb">
+              <div class="card airbnb slack">
                 <img src="img/slack.svg" class="card-img-top" alt="Jimmy Hendrix">
                 <div class="card-body">
-                  <span class="stars">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star"></i>
-                  </span>
                   <p class="card-text">
-                    <b>4.95 out of 5 stars</b>
-                    from 23 viewers
+                    They build modern-looking websites easily using Tabs.
+                    <a href="#">Learn more</a>
                   </p>
                 </div>
               </div>
+
+          <!--<div class="card airbnb slack">
+                <img src="img/slack.svg" class="card-img-top" alt="Jimmy Hendrix">
+                <div class="card-body">
+                  <p class="card-text">
+                    They build modern-looking websites easily using Tabs.
+                    <a href="#">Learn more</a>
+                  </p>
+                </div>
+              </div>-->
 
           </div>
         </div>
@@ -395,14 +393,14 @@
                 </div>
                 <div id="left-3" class="collapse" aria-labelledby="headingThree" data-parent="#accordionAnswers">
                   <div class="card-body">
-                    And lastly, the placeholder content for the third and final accordion panel. This panel is hidden by default.
+                    If you don’t want the button text to wrap, you can add the .text-nowrap class to the button. In Sass, you can set $btn-white-space: nowrap to disable text wrapping for each button. And lastly, the placeholder content for the third and final accordion panel. This panel is hidden by default.
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <div class="col">
-            <div class="accordion" id="accordionAnswers">
+            <div class="accordion" id="accordionAnswers-right">
               <div class="card">
                 <div class="card-header" id="headingOne">
                   <h2 class="mb-0">
@@ -412,7 +410,7 @@
                   </h2>
                 </div>
 
-                <div id="right-1" class="collapse" aria-labelledby="headingOne" data-parent="#accordionAnswers">
+                <div id="right-1" class="collapse" aria-labelledby="headingOne" data-parent="#accordionAnswers-right">
                   <div class="card-body">
                     Some placeholder content for the first accordion panel. This panel is shown by default, thanks to the <code>.show</code> class.
                   </div>
@@ -426,9 +424,9 @@
                     </button>
                   </h2>
                 </div>
-                <div id="right-2" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionAnswers">
+                <div id="right-2" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionAnswers-right">
                   <div class="card-body">
-                    Some placeholder content for the second accordion panel. This panel is hidden by default.
+                    Some placeholder content for the second accordion panel. This panel is hidden by default. And lastly, the placeholder content for the third and final accordion panel. This panel is hidden by default.
                   </div>
                 </div>
               </div>
@@ -440,7 +438,7 @@
                     </button>
                   </h2>
                 </div>
-                <div id="right-3" class="collapse" aria-labelledby="headingThree" data-parent="#accordionAnswers">
+                <div id="right-3" class="collapse" aria-labelledby="headingThree" data-parent="#accordionAnswers-right">
                   <div class="card-body">
                     And lastly, the placeholder content for the third and final accordion panel. This panel is hidden by default.
                   </div>
@@ -449,9 +447,76 @@
             </div>
           </div>
         </div>
+        <div class="container project">
+          <p>I want to start a new project.</p>
+          <div class="btn">
+            <button class="btn btn-primary" type="submit">Buy now<i class="bi bi-arrow-right-short"></i></button>
+            <a class="nav-link" href="#">Learn more</a>
+          </div>
+        </div>
       </div>
     </section>
 
+    <!-- //////////// FOOTER //////////// -->
+    <!-- //////////////////////////////// -->
+    <footer class="">
+      <div class="container solutions">
+        <div class="row">
+          <div class="col-7">
+            <h4>Brilliant solutions for your ideas</h4>
+            <p>Modern-looking websites.</p>
+          </div>
+          <div class="col-5">
+            <button class="btn btn-primary" type="submit">Purchase now</button>
+            <button class="btn btn-light" type="submit"><i class="bi bi-book"></i>Documentation</button>
+          </div>
+        </div>
+      </div>
+      <div class="container pt-4 my-md-5 pt-md-5 border-top border-bottom">
+          <div class="row">
+            <div class="col-7 recap">
+              <img class="mb-2" src="img/odoo-white.svg" alt="" width="100">
+              <p>Odoo attempts to bring the best development experience to designers and developers by offering the tools needed for having a quick and solid start in most web projects.</p>
+              <span class="icons">
+                <i class="bi bi-dribbble"></i>
+                <i class="bi bi-github"></i>
+                <i class="bi bi-instagram"></i>
+                <i class="bi bi-facebook"></i>
+              </span>
+            </div>
+            <div class="col">
+              <h5>Account</h5>
+              <ul class="list-unstyled text-small">
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Billing</a></li>
+                <li><a href="#">Notifications</a></li>
+              </ul>
+            </div>
+            <div class="col">
+              <h5>About</h5>
+              <ul class="list-unstyled text-small">
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Careers</a></li>
+              </ul>
+            </div>
+            <div class="col">
+              <h5>Company</h5>
+              <ul class="list-unstyled text-small">
+                <li><a href="#">Community</a></li>
+                <li><a href="#">Help center</a></li>
+                <li><a href="#">Support</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="container bottom">
+          <p class="float-right"><a href="#">Terms</a><a href="#">Privacy</a><a href="#">Cookies</a></p>
+          <p>© <span>Odoo</span>. All rights reserved</p>
+        </div>
+      </footer>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
   </body>

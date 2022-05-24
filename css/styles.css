@@ -9,7 +9,7 @@
   background-color: #038AFF; }
 
 section .content h3 {
-  font-size: 38px;
+  font-size: 32px;
   padding: 0.8em 0 1em;
   color: #152C5B; }
 
@@ -46,23 +46,28 @@ p {
     padding-right: 10px; }
 
 header {
-  padding: 10em 0 5em;
+  padding: 10em 0 6em;
   height: auto;
-  color: #ffffff; }
+  color: #ffffff;
+  margin-bottom: 3em;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 3vw), 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 3vw), 0 100%); }
   header .container {
     padding: 0px 0px; }
   header h1 {
     color: #ffffff;
-    font-size: 75px; }
+    font-size: 60px; }
   header p {
     padding: 2.5em 0;
     width: 80%; }
-  header .btn {
+  header .btn-primary {
     background-color: #ffffff;
     padding: 15px 20px;
     display: block;
     border: none;
     color: #152C5B; }
+    header .btn-primary i {
+      padding-left: 10px; }
   header ul {
     padding: 2.5em 0 20px; }
   header li {
@@ -71,7 +76,8 @@ header {
     padding: 5px;
     text-align: left; }
     header li:first-child {
-      padding-left: 0; }
+      padding-left: 0;
+      font-size: 13px; }
   header .cards-container {
     width: 90%;
     padding-left: 10%; }
@@ -88,6 +94,8 @@ header {
         border-bottom: 1px solid #E9ECF3; }
         header .cards-container .cards .row:last-child, header .cards-container .cards .row:first-child {
           border: none; }
+        header .cards-container .cards .row .btn-outline-secondary {
+          font-size: 12px; }
         header .cards-container .cards .row img {
           width: 100%;
           padding-bottom: 1em; }
@@ -95,6 +103,8 @@ header {
           font-size: 17px;
           font-weight: 600;
           padding-bottom: 0px; }
+        header .cards-container .cards .row h5.title {
+          padding-top: 5px; }
         header .cards-container .cards .row p {
           padding: 0.1em 0 0.7em;
           font-size: 14px;
@@ -108,17 +118,22 @@ header {
 section {
   padding-top: 7em;
   position: relative; }
-  section .bloc.video.rounded-lg {
+  section .bloc.video.rounded-lg.float {
     display: block;
-    width: 100%;
+    width: 75%;
     padding: 0;
     border: none;
-    position: relative; }
-    section .bloc.video.rounded-lg button {
+    position: absolute;
+    top: -80px;
+    right: -60px;
+    box-shadow: 1px -4px 14px 7px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 1px -4px 14px 7px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 1px -4px 14px 7px rgba(0, 0, 0, 0.1); }
+    section .bloc.video.rounded-lg.float button {
       position: absolute;
       top: 20px;
       left: 20px; }
-      section .bloc.video.rounded-lg button i {
+      section .bloc.video.rounded-lg.float button i {
         padding-left: 5px; }
   section .bloc {
     display: block;
@@ -126,7 +141,8 @@ section {
     padding: 30px;
     border: 1px solid #E9ECF3; }
     section .bloc h4 {
-      padding-bottom: 20px; }
+      padding-bottom: 20px;
+      font-size: 20px; }
     section .bloc h5 {
       font-size: 17px;
       font-weight: 500;
@@ -148,7 +164,7 @@ section {
       box-sizing: border-box;
       display: inline;
       padding: 5px 15px;
-      font-size: 15px;
+      font-size: 14px;
       color: #ffffff;
       background-color: #FEBD3D;
       width: 15%;
@@ -157,7 +173,7 @@ section {
       box-sizing: border-box;
       display: inline;
       padding: 5px 15px;
-      font-size: 15px;
+      font-size: 14px;
       color: #ffffff;
       background-color: #5CCAA7;
       width: 15%;
@@ -166,7 +182,7 @@ section {
       box-sizing: border-box;
       display: inline;
       padding: 5px 15px;
-      font-size: 15px;
+      font-size: 14px;
       color: #ffffff;
       background-color: #3EA3FD;
       width: 15%;
@@ -182,6 +198,10 @@ section {
     padding-left: 0;
     padding-top: 2em; }
 
+section.features .green p {
+  color: #5CCAA7; }
+  section.features .green p i {
+    margin-right: 20px; }
 section.features .bloc.video.rounded-lg {
   display: block;
   width: 100%;
@@ -230,17 +250,28 @@ section.technology {
     .card .card-body img {
       width: 30%;
       margin: 0px auto 15px; }
+    .card .card-body:first-child {
+      padding-right: 0; }
+  .card div.success-text img {
+    float: left;
+    width: 34px;
+    margin-right: 8px; }
   .card div.success-text p {
-    font-size: 14px;
+    font-size: 13px;
     margin: 0;
     display: block;
     color: #738299; }
   .card div.success-text b {
     display: block; }
 
+.airbnb div.center {
+  margin: 0 auto;
+  width: auto; }
 .airbnb img {
   width: 50%;
   margin: 50px auto 15px; }
+.airbnb .company {
+  width: 80px; }
 .airbnb .stars {
   display: block;
   margin: 0 auto 20px;
@@ -275,30 +306,55 @@ section.technology {
       float: right;
       margin: 20px 40px 0 0; }
 
-.install a img {
-  width: 40%; }
+section.install p {
+  margin-bottom: 50px; }
+section.install a {
+  margin-right: 20px; }
+  section.install a img {
+    width: 40%;
+    opacity: 0.8; }
+    section.install a img:hover {
+      transition: all 0.4s;
+      opacity: 1; }
 
 .awards {
   padding-top: 10em;
   padding-bottom: 10em;
-  background: #E9ECF3; }
+  background: #E9ECF3;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 3vw), 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 3vw), 0 100%); }
   .awards .card {
     width: 23%;
-    margin-right: 2%; }
+    margin-right: 2%;
+    transition: all 0.4s;
+    top: 10px; }
     .awards .card:first-child {
       margin-left: 10px; }
     .awards .card:last-child {
       margin-right: 0; }
+    .awards .card:first-child, .awards .card:nth-child(3) {
+      top: 40px; }
     .awards .card:hover {
+      top: 20px;
       box-shadow: 1px -4px 14px 7px rgba(100, 100, 100, 0.1);
       -webkit-box-shadow: 1px -4px 14px 7px rgba(100, 100, 100, 0.1);
       -moz-box-shadow: 1px -4px 14px 7px rgba(100, 100, 100, 0.1); }
+    .awards .card p {
+      font-size: 14px; }
     .awards .card b {
       margin-bottom: 0;
       padding: 0;
-      color: #152C5B; }
+      color: #152C5B;
+      font-size: 18px; }
+  .awards .card.amazon p, .awards .card.slack p {
+    font-size: 15px;
+    padding: 10px; }
+    .awards .card.amazon p a, .awards .card.slack p a {
+      display: block;
+      color: #152C5B;
+      margin-top: 15px; }
   .awards .container.content {
-    width: 125%;
+    width: 100%;
     padding: 0; }
 
 .container.accordion {
@@ -306,8 +362,13 @@ section.technology {
   .container.accordion div.text {
     text-align: center;
     width: 100%; }
+    .container.accordion div.text h3 {
+      color: #152C5B;
+      font-size: 1.90rem; }
     .container.accordion div.text p {
-      margin-bottom: 5em; }
+      margin: 1.8em 0 5em;
+      font-size: 18px;
+      color: #738299; }
   .container.accordion .accordion {
     border-radius: 25px;
     border-color: #E9ECF3;
@@ -322,15 +383,90 @@ section.technology {
       .container.accordion .accordion .card .card-header {
         background-color: #ffffff; }
       .container.accordion .accordion .card .card-body {
-        border: 1px solid #E9ECF3; }
+        border: 1px solid #E9ECF3;
+        color: #738299; }
   .container.accordion .accordion > .card:not(:last-of-type) {
     border: 1px solid #E9ECF3; }
-  .container.accordion button {
+  .container.accordion .card button {
     font-weight: 500;
     color: #152C5B; }
-    .container.accordion button i:first-child {
+    .container.accordion .card button i:first-child {
       padding-right: 10px; }
-    .container.accordion button i:last-child {
+    .container.accordion .card button i:last-child {
       float: right; }
+  .container.accordion .btn:focus {
+    box-shadow: none; }
+  .container.accordion .project {
+    padding-top: 5em;
+    text-align: center;
+    color: #152C5B; }
+    .container.accordion .project .btn-primary {
+      padding: 15px 30px;
+      margin-right: 15px;
+      color: #ffffff; }
+      .container.accordion .project .btn-primary i {
+        padding-left: 10px; }
+    .container.accordion .project a {
+      display: inline-block;
+      color: #152C5B; }
+      .container.accordion .project a:hover {
+        text-decoration: underline; }
+
+footer {
+  background: #161348;
+  padding-top: 20vh;
+  color: #ffffff;
+  position: relative;
+  -webkit-clip-path: polygon(0 calc(0% + 3vw), 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 calc(0% + 3vw), 100% 0, 100% 100%, 0 100%); }
+  footer .container.solutions {
+    color: #E9ECF3; }
+    footer .container.solutions .col-7 {
+      padding-left: 0; }
+      footer .container.solutions .col-7 p {
+        padding-top: 15px;
+        font-size: 16px; }
+    footer .container.solutions .col-5 {
+      padding-right: 0; }
+    footer .container.solutions button {
+      padding: 10px 25px;
+      float: right; }
+      footer .container.solutions button.btn-primary {
+        margin-left: 10px; }
+      footer .container.solutions button i {
+        color: #038AFF;
+        padding-right: 15px; }
+  footer .border-top {
+    border-color: #2F2C5B !important; }
+  footer img.mb-2 {
+    padding-bottom: 20px; }
+  footer .recap {
+    padding: 0 40px 5em 0; }
+    footer .recap p {
+      font-size: 14px;
+      color: #ACAABF; }
+    footer .recap .icons {
+      padding-top: 20px; }
+      footer .recap .icons i {
+        margin-right: 10px; }
+  footer .col h5 {
+    font-size: 16px;
+    padding-bottom: 26px; }
+  footer .col li a {
+    font-size: 14px;
+    color: #ACAABF; }
+    footer .col li a:hover {
+      color: #ffffff;
+      text-decoration: none; }
+  footer .container.bottom {
+    padding: 0 0 20px;
+    color: #ACAABF; }
+    footer .container.bottom p {
+      font-size: 14px; }
+    footer .container.bottom span {
+      color: #ffffff; }
+    footer .container.bottom a {
+      margin-left: 20px;
+      color: #ACAABF; }
 
 /*# sourceMappingURL=styles.css.map */
